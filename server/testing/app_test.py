@@ -325,4 +325,5 @@ class TestApp:
             reserved = Reservation.query.filter(
                 Reservation.id == reservation.id
             ).first()
+            # does not test for delete customer with deleted reservations
             assert not reserved

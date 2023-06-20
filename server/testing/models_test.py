@@ -77,6 +77,6 @@ class TestModels:
                 party_size=5,
                 # party_name="spider friends",
             )
-            with pytest.raises(IntegrityError):
+            with pytest.raises(ValueError):
                 db.session.add(res)
                 db.session.commit()
